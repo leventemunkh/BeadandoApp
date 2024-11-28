@@ -5,6 +5,7 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -14,6 +15,7 @@
             <!-- Adatbázis menü -->
             <Menu text="Adatbázis">
                 <MenuItem text="Olvas" onAction="#onOlvasClick"/>
+                <MenuItem text="Olvas2" onAction="#onOlvas2Click"/>
                 <MenuItem text="Ír" onAction="#onIrClick"/>
                 <MenuItem text="Módosít" onAction="#onModositClick"/>
                 <MenuItem text="Töröl" onAction="#onTorolClick"/>
@@ -24,6 +26,7 @@
                 <MenuItem text="Letöltés" onAction="#onLetoltesClick"/>
                 <MenuItem text="Grafikon" onAction="#onGrafikonClick"/>
             </Menu>
+
 
             <!-- Forex menü -->
             <Menu text="Forex">

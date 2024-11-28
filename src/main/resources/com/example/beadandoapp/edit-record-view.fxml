@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.beadandoapp.EditRecordController"
+      spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <ComboBox fx:id="recordSelector" promptText="Válassz egy rekordot"/>
+    <TextField fx:id="nameField" promptText="Tanösvény neve"/>
+    <TextField fx:id="lengthField" promptText="Hossz (km)"/>
+    <TextField fx:id="stationField" promptText="Állomások száma"/>
+    <Button text="Módosítás" onAction="#onUpdateButtonClick"/>
+</VBox>
