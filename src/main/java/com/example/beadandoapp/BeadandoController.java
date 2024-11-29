@@ -8,6 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 
 import java.io.IOException;
 
@@ -171,19 +172,50 @@ public class BeadandoController {
     // Forex menüpontok
     @FXML
     protected void onSzamlaInfoClick() {
-        System.out.println("Forex Számlainformációk menüpont aktiválva!");
-        // Itt lehet majd számlainformációkat megjeleníteni
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("account-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Számlainformációk");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     @FXML
     protected void onArakClick() {
         System.out.println("Forex Aktuális árak menüpont aktiválva!");
-        // Itt lehet majd aktuális árakat lekérdezni
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("current-prices-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Aktuális árak");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Hiba az Aktuális árak nézet betöltésekor: " + e.getMessage());
+        }
     }
 
+
     @FXML
-    protected void onHistorikusClick() {
-        System.out.println("Forex Historikus árak menüpont aktiválva!");
-        // Itt lehet majd historikus árakat megjeleníteni
+    public void onHistorikusClick() {
+        System.out.println("Historikus árak menüpont aktiválva!");
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("historical-prices-view.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Historikus árak");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Hiba a Historikus árak nézet betöltésekor: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }

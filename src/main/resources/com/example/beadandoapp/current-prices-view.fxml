@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.beadandoapp.CurrentPricesController"
+      spacing="10" alignment="CENTER" padding="10">
+    <ComboBox fx:id="currencyPairComboBox" promptText="Válassz devizapárt" prefWidth="200" />
+    <Button text="Lekérés" onAction="#fetchCurrentPrice" />
+    <Label fx:id="priceLabel" text="Eredmény itt jelenik meg..." />
+</VBox>

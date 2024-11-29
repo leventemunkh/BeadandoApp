@@ -6,6 +6,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -36,6 +37,8 @@
                 <MenuItem text="Aktuális árak" onAction="#onArakClick"/>
                 <MenuItem text="Historikus árak" onAction="#onHistorikusClick"/>
             </Menu>
+
+
 
             <Menu text="Párhuzamos">
                 <MenuItem text="Párhuzamos futás" onAction="#onParallelClick" />
