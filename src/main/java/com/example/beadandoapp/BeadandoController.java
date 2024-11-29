@@ -149,6 +149,23 @@ public class BeadandoController {
         }
     }
 
+    @FXML
+    protected void onParallelClick() {
+        System.out.println("Párhuzamos futás menüpont aktiválva!");
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("parallel-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("Párhuzamos Programvégrehajtás");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Hiba a Párhuzamos nézet betöltésekor: " + e.getMessage());
+        }
+    }
+
+
 
 
     // Forex menüpontok
