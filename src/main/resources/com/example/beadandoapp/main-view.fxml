@@ -23,9 +23,11 @@
 
             <!-- SOAP Kliens menü -->
             <Menu text="SOAP Kliens">
-                <MenuItem text="Letöltés" onAction="#onLetoltesClick"/>
-                <MenuItem text="Grafikon" onAction="#onGrafikonClick"/>
+                <MenuItem text="Letöltés" onAction="#onSoapDownloadClick"/>
+
+
             </Menu>
+
 
 
             <!-- Forex menü -->
