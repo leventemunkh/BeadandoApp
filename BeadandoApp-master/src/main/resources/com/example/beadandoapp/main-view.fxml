@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.beadandoapp.BeadandoController">
+    <top>
+        <MenuBar>
+            <!-- Adatbázis menü -->
+            <Menu text="Adatbázis">
+                <MenuItem text="Olvas" onAction="#onOlvasClick"/>
+                <MenuItem text="Olvas2" onAction="#onOlvas2Click"/>
+                <MenuItem text="Ír" onAction="#onIrClick"/>
+                <MenuItem text="Módosít" onAction="#onModositClick"/>
+                <MenuItem text="Töröl" onAction="#onTorolClick"/>
+            </Menu>
+
+            <!-- SOAP Kliens menü -->
+            <Menu text="SOAP Kliens">
+                <MenuItem text="Letöltés" onAction="#onSoapDownloadClick"/>
+
+
+            </Menu>
+
+
+
+            <!-- Forex menü -->
+            <Menu text="Forex">
+                <MenuItem text="Számlainformációk" onAction="#onSzamlaInfoClick"/>
+                <MenuItem text="Aktuális árak" onAction="#onArakClick"/>
+                <MenuItem text="Historikus árak" onAction="#onHistorikusClick"/>
+            </Menu>
+
+
+
+            <Menu text="Párhuzamos">
+                <MenuItem text="Párhuzamos futás" onAction="#onParallelClick" />
+            </Menu>
+
+        </MenuBar>
+    </top>
+    <center>
+        <!-- Itt jelenik meg az aktuális tartalom -->
+    </center>
+</BorderPane>

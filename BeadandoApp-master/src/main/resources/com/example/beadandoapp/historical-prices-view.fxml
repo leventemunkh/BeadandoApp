@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.beadandoapp.HistoricalPricesController" spacing="10" alignment="CENTER" padding="10 10 10 10"
+>
+    <ComboBox fx:id="currencyPairComboBox" promptText="Válassz devizapárt" prefWidth="200" />
+    <HBox spacing="10" alignment="CENTER">
+        <DatePicker fx:id="startDatePicker" promptText="Kezdő dátum" />
+        <DatePicker fx:id="endDatePicker" promptText="Záró dátum" />
+    </HBox>
+    <Button text="Lekérés" onAction="#fetchHistoricalPrices" />
+    <TableView fx:id="pricesTable">
+        <columns>
+            <TableColumn fx:id="dateColumn" text="Dátum" />
+            <TableColumn fx:id="priceColumn" text="Ár" />
+        </columns>
+    </TableView>
+    <Canvas fx:id="priceChart" width="400" height="300" />
+</VBox>
